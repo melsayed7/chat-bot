@@ -1,5 +1,5 @@
-import 'package:chat_bot_app/feature/home/model/chat_message_model.dart';
-import 'package:chat_bot_app/feature/home/repo/gemini_service.dart';
+import 'package:chat_bot_app/feature/chat/model/chat_message_model.dart';
+import 'package:chat_bot_app/feature/chat/repo/gemini_service.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'chat_state.dart';
 

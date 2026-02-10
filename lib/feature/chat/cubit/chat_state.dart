@@ -1,4 +1,4 @@
-import 'package:chat_bot_app/feature/home/model/chat_message_model.dart';
+import 'package:chat_bot_app/feature/chat/model/chat_message_model.dart';
 import 'package:equatable/equatable.dart';
 
 

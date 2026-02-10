@@ -1,10 +1,10 @@
 import 'package:chat_bot_app/core/theme/app_color.dart';
 import 'package:chat_bot_app/core/theme/app_images.dart';
-import 'package:chat_bot_app/feature/home/cubit/chat_cubit.dart';
-import 'package:chat_bot_app/feature/home/cubit/chat_state.dart';
-import 'package:chat_bot_app/feature/home/widget/build_appBar.dart';
-import 'package:chat_bot_app/feature/home/widget/build_chat_bubble.dart';
-import 'package:chat_bot_app/feature/home/widget/build_input_bar.dart';
+import 'package:chat_bot_app/feature/chat/cubit/chat_cubit.dart';
+import 'package:chat_bot_app/feature/chat/cubit/chat_state.dart';
+import 'package:chat_bot_app/feature/chat/widget/build_appBar.dart';
+import 'package:chat_bot_app/feature/chat/widget/build_chat_bubble.dart';
+import 'package:chat_bot_app/feature/chat/widget/build_input_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';

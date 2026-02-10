@@ -1,7 +1,7 @@
 import 'package:chat_bot_app/core/routing/routes.dart';
-import 'package:chat_bot_app/feature/home/cubit/chat_cubit.dart';
-import 'package:chat_bot_app/feature/home/repo/gemini_service.dart';
-import 'package:chat_bot_app/feature/home/view/chat_screen.dart';
+import 'package:chat_bot_app/feature/chat/cubit/chat_cubit.dart';
+import 'package:chat_bot_app/feature/chat/repo/gemini_service.dart';
+import 'package:chat_bot_app/feature/chat/view/chat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -16,7 +16,7 @@ class ApiClient {
   void _initDio() {
     _dio = Dio(
       BaseOptions(
-        baseUrl: 'https://your-api-base-url.com',
+        baseUrl: 'https://generativelanguage.googleapis.com/v1beta/models',
         connectTimeout: const Duration(seconds: 30),
         receiveTimeout: const Duration(seconds: 30),
         sendTimeout: const Duration(seconds: 30),
