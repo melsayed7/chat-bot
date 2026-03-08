@@ -1,5 +1,3 @@
-/// contents : [{"role":"user","parts":[{"text":"hi"}]},{"parts":[{"text":"Hello! How can I help you today?","thoughtSignature":"EpoBCpcBAb4+9vsxc+aIw2GKTmx/+xifRZYh6LB8Xf3zCbKdy/sqOV8rv6B7uVhwFOhfy7OESqPJSZyjoSCtqAt74pC3MMQwP2B8ii9GTFLDF6jDyCAQd08zaUfUrCLFu/o/p49nqewEX7CuxSoFNmRbYYP3N5mR2vl1NC8+inIp16W6pqkIhQXJWYDoSjEKU9hvbBsXF1ja1oDkJg=="}],"role":"model"},{"role":"user","parts":[{"text":"what is first question i asked?"}]}]
-
 class ChatMessageModel {
   ChatMessageModel({this.contents});
 
@@ -15,16 +13,10 @@ class ChatMessageModel {
   List<Contents>? contents;
 
   Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
-    if (contents != null) {
-      map['contents'] = contents?.map((v) => v.toJson()).toList();
-    }
-    return map;
+    // Only include non-null contents
+    return {'contents': contents?.map((c) => c.toJson()).toList()};
   }
 }
-
-/// role : "user"
-/// parts : [{"text":"hi"}]
 
 class Contents {
   Contents({this.role, this.parts});
@@ -39,33 +31,40 @@ class Contents {
     }
   }
 
-  String? role;
+  factory Contents.fromUserMessage(String content) {
+    return Contents(
+      parts: [Parts(text: content)],
+      role: 'user',
+    );
+  }
+
+  String? role; // "user" or "model"
   List<Parts>? parts;
 
   Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
-    map['role'] = role;
-    if (parts != null) {
-      map['parts'] = parts?.map((v) => v.toJson()).toList();
-    }
-    return map;
+    return {
+      if (role != null) 'role': role,
+      'parts': parts?.map((p) => p.toJson()).toList(),
+    };
   }
+
+  bool get isUser => role == 'user';
 }
 
-/// text : "hi"
-
 class Parts {
-  Parts({this.text});
+  Parts({this.text, this.thoughtSignature});
 
   Parts.fromJson(dynamic json) {
     text = json['text'];
+    thoughtSignature = json['thoughtSignature'];
   }
 
   String? text;
+  String? thoughtSignature;
 
   Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
-    map['text'] = text;
+    final map = {'text': text};
+    if (thoughtSignature != null) map['thoughtSignature'] = thoughtSignature;
     return map;
   }
 }
