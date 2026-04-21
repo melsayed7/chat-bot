@@ -40,7 +40,9 @@ class BuildChatBubble extends StatelessWidget {
   Widget _bubble(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      constraints: const BoxConstraints(maxWidth: 280),
+      constraints: BoxConstraints(
+        maxWidth: MediaQuery.of(context).size.width * 0.7,
+      ),
       decoration: BoxDecoration(
         color: isUser ? AppColor.blueColor : AppColor.lightGrayColor,
         borderRadius: isUser
@@ -55,12 +57,10 @@ class BuildChatBubble extends StatelessWidget {
                 bottomRight: Radius.circular(12),
               ),
       ),
-      child: Flexible(
-        child: Text(
-          text,
-          style: TextStyle(
-            color: isUser ? AppColor.whiteColor : AppColor.blackColor,
-          ),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: isUser ? AppColor.whiteColor : AppColor.blackColor,
         ),
       ),
     );

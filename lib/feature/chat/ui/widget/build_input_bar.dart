@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../data/models/chat_message_model.dart';
 
 class BuildInputBar extends StatelessWidget {
-  BuildInputBar({Key? key, required this.history}) : super(key: key);
+  BuildInputBar({super.key, required this.history});
   final List<ChatMessageModel> history;
 
   final TextEditingController controller = TextEditingController();
@@ -27,6 +27,7 @@ class BuildInputBar extends StatelessWidget {
                 borderRadius: BorderRadius.circular(24),
               ),
               child: TextFormField(
+                key: Key('Text_Form_Field_Key'),
                 controller: controller,
                 decoration: InputDecoration(
                   hintText: "Write your message",

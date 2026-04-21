@@ -4,7 +4,7 @@ import 'package:loading_indicator/loading_indicator.dart';
 import '../../../../core/theme/app_color.dart';
 
 class ChatLoadingBubble extends StatelessWidget {
-  const ChatLoadingBubble({Key? key}) : super(key: key);
+  const ChatLoadingBubble({super.key});
 
   @override
   Widget build(BuildContext context) {

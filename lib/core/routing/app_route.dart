@@ -1,12 +1,8 @@
 import 'package:chat_bot_app/core/routing/routes.dart';
-import 'package:chat_bot_app/feature/chat/data/repos/gemenai_chat_repo_impl.dart';
-import 'package:chat_bot_app/feature/chat/data/services/gemenai_chat_services.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../feature/chat/ui/chat_screen.dart';
-import '../../feature/chat/ui/cubit/send_message_cubit.dart';
-import '../../feature/onBoarding_screen/onBoarding_screen.dart';
+import '../../feature/onBoarding_screen/on_boarding_screen.dart';
 
 class AppRoute {
   static Route<dynamic> generateRoute(RouteSettings settings) {

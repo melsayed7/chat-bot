@@ -1,14 +1,10 @@
-import 'package:chat_bot_app/feature/chat/ui/cubit/send_message_cubit.dart';
-import 'package:chat_bot_app/feature/chat/ui/widget/chat_failure_bubble.dart';
-import 'package:chat_bot_app/feature/chat/ui/widget/chat_loading_bubble.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../data/models/chat_message_model.dart';
 import 'build_chat_bubble.dart';
 
 class SuccessMessagesListView extends StatelessWidget {
-  SuccessMessagesListView({Key? key, required this.history}) : super(key: key);
+  const SuccessMessagesListView({super.key, required this.history});
 
   final List<ChatMessageModel> history;
 

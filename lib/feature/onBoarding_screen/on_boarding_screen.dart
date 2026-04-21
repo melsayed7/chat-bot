@@ -5,7 +5,7 @@ import 'package:chat_bot_app/core/theme/app_images.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatelessWidget {
-  const OnBoardingScreen({Key? key}) : super(key: key);
+  const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

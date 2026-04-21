@@ -6,11 +6,11 @@ class ChatFailureBubble extends StatelessWidget {
   final VoidCallback onResend;
 
   const ChatFailureBubble({
-    Key? key,
+    super.key,
     required this.errorMessage,
     required this.lastMessage,
     required this.onResend,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

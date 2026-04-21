@@ -5,8 +5,7 @@ import 'build_chat_bubble.dart';
 import 'chat_loading_bubble.dart';
 
 class LoadingMessagesListView extends StatelessWidget {
-  const LoadingMessagesListView({Key? key, required this.history})
-      : super(key: key);
+  const LoadingMessagesListView({super.key, required this.history});
 
   final List<ChatMessageModel> history;
 

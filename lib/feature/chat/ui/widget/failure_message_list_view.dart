@@ -7,8 +7,7 @@ import 'build_chat_bubble.dart';
 import 'chat_failure_bubble.dart';
 
 class FailureMessageListView extends StatelessWidget {
-  const FailureMessageListView({Key? key, required this.history})
-      : super(key: key);
+  const FailureMessageListView({super.key, required this.history});
   final List<ChatMessageModel> history;
 
   @override

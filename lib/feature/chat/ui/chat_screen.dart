@@ -3,7 +3,7 @@ import 'package:chat_bot_app/core/theme/app_color.dart';
 import 'package:chat_bot_app/core/theme/app_images.dart';
 import 'package:chat_bot_app/feature/chat/data/models/chat_message_model.dart';
 import 'package:chat_bot_app/feature/chat/ui/cubit/send_message_cubit.dart';
-import 'package:chat_bot_app/feature/chat/ui/widget/build_appBar.dart';
+import 'package:chat_bot_app/feature/chat/ui/widget/build_app_bar.dart';
 import 'package:chat_bot_app/feature/chat/ui/widget/build_input_bar.dart';
 import 'package:chat_bot_app/feature/chat/ui/widget/send_message_bloc_consumer.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +11,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ChatScreen extends StatelessWidget {
-  ChatScreen({Key? key}) : super(key: key);
+  ChatScreen({super.key});
 
   final List<ChatMessageModel> history = [];
 

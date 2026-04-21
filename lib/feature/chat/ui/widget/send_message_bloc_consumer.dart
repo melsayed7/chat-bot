@@ -1,5 +1,4 @@
 import 'package:chat_bot_app/feature/chat/ui/cubit/send_message_cubit.dart';
-import 'package:chat_bot_app/feature/chat/ui/cubit/send_message_cubit.dart';
 import 'package:chat_bot_app/feature/chat/ui/widget/success_message_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,9 +8,9 @@ import 'failure_message_list_view.dart';
 import 'loading_message_list_view.dart';
 
 class SendMessageBlocConsumer extends StatelessWidget {
-  SendMessageBlocConsumer({Key? key, required this.history}) : super(key: key);
+ const  SendMessageBlocConsumer({super.key, required this.history});
 
-  List<ChatMessageModel> history;
+  final List<ChatMessageModel> history;
 
   @override
   Widget build(BuildContext context) {

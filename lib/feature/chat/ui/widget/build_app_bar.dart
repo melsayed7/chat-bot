@@ -3,7 +3,7 @@ import 'package:chat_bot_app/core/theme/app_images.dart';
 import 'package:flutter/material.dart';
 
 class BuildAppBar extends StatelessWidget {
-  const BuildAppBar({Key? key}) : super(key: key);
+  const BuildAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
