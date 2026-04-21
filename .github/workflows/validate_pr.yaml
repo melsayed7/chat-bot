@@ -34,3 +34,28 @@ jobs:
       - name: Run fastlane validate_pr (analyze, test, Android APK)
         working-directory: android
         run: bundle exec fastlane validate_pr
+
+  ios-validate-pr:
+    runs-on: macos-latest
+
+    steps:
+      - name: Clone the repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: flutter-actions/setup-flutter@v4
+        with:
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Run tests
+        run: flutter test
+
+      - name: Build iOS (no code signing)
+        run: flutter build ios --no-codesign
