@@ -3,7 +3,6 @@ import 'package:chat_bot_app/feature/chat/data/models/chat_message_model.dart';
 import 'package:chat_bot_app/feature/chat/domain/chat_repo.dart';
 import 'package:chat_bot_app/feature/chat/ui/widget/build_chat_bubble.dart';
 import 'package:chat_bot_app/feature/chat/ui/widget/chat_failure_bubble.dart';
-import 'package:chat_bot_app/feature/chat/ui/widget/chat_loading_bubble.dart';
 import 'package:chat_bot_app/feature/chat/ui/widget/failure_message_list_view.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
