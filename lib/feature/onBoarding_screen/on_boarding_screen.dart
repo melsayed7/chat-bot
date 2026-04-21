@@ -20,7 +20,7 @@ class OnBoardingScreen extends StatelessWidget {
                 padding: const EdgeInsets.only(top:72,bottom: 14),
                 child: Center(
                   child: Text(
-                    'You AI Assistant',
+                    'Your AI Assistant',
                     style: TextStyle(
                       color: AppColor.blueColor,
                       fontSize: 23,
