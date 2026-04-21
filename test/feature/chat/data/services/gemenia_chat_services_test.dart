@@ -129,7 +129,7 @@ void main() {
 
   test('retries 3 times on timeout then throws', () async {
     when(
-      () => apiClient.post(
+          () => apiClient.post(
         any(),
         queryParameters: any(named: 'queryParameters'),
         data: any(named: 'data'),
@@ -143,13 +143,13 @@ void main() {
 
     /// expect
     await expectLater(
-      () => service.sendMessage(messages: fakeMessages),
+          () => service.sendMessage(messages: fakeMessages),
       throwsA(isA<DioException>()),
     );
 
     /// verify retries count
     verify(
-      () => apiClient.post(
+          () => apiClient.post(
         any(),
         queryParameters: any(named: 'queryParameters'),
         data: any(named: 'data'),
@@ -159,7 +159,7 @@ void main() {
 
   test('does not retry on 400 error', () async {
     when(
-      () => apiClient.post(
+          () => apiClient.post(
         any(),
         queryParameters: any(named: 'queryParameters'),
         data: any(named: 'data'),
@@ -175,12 +175,12 @@ void main() {
     );
 
     await expectLater(
-      () => service.sendMessage(messages: fakeMessages),
+          () => service.sendMessage(messages: fakeMessages),
       throwsA(isA<DioException>()),
     );
 
     verify(
-      () => apiClient.post(
+          () => apiClient.post(
         any(),
         queryParameters: any(named: 'queryParameters'),
         data: any(named: 'data'),
